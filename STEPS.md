@@ -1,15 +1,16 @@
 # Harmonia_do_samba
 Automação de instalação e configuração básica do SAMBA com Pyhton
 
-1. Acesse o servidor via SSH:
+1. Acesse o servidor via SSH, utlizando o Putty ou xshell
 
-2. Instale o Python:
+2. Instale o Python e o Vim (ou outro de sua preferência):
 
-```sudo apt install pyhton3```
+```sudo apt install python3```
+```sudo apt install vim```
 
-3. Crie o arquivo arquivo python:
+3. Crie e abra o arquivo python:
 
-```$ touch harmonia_do_samba.py```
+```$ vim harmonia_do_samba.py```
 
 4. Digite ou copie o código abaixo para o arquivo criado:
 
@@ -63,5 +64,6 @@ if acao >= 5:
     print('Favor inserir um número menor que 5')
 else:
     print('Operação finalizada')
+    
 ```
 
