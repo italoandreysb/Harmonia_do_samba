@@ -3,9 +3,10 @@ Automação de instalação e configuração básica do SAMBA com Pyhton
 
 1. Acesse o servidor via SSH, utlizando o Putty ou xshell
 
-2. Instale o Python e o Vim (ou outro de sua preferência):
+2. Instale o Python e o Vim (ou outro editor de texto de sua preferência):
 
 ```sudo apt install python3```
+
 ```sudo apt install vim```
 
 3. Crie e abra o arquivo python:
