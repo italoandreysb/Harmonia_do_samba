@@ -1,14 +1,15 @@
 import os
-acao = 0# inicializando a variável
-
-print('SSSSSSSS  AAAAAAAA  MMM   MMM  BBBBBBB   AAAAAAAA \n' #Cabeçalho
+# inicializando a variável
+acao = 0
+#Cabeçalho
+print('SSSSSSSS  AAAAAAAA  MMM   MMM  BBBBBBB   AAAAAAAA \n' 
       'SS        AA    AA  MM M M MM  BB   BBB  AA    AA \n'
       'SSSSSSSS  AAAAAAAA  MM MMM MM  BBBBBBBB  AAAAAAAA \n'
       '      SS  AA    AA  MM  M  MM  BB   BBB  AA    AA \n'
       'SSSSSSSS  AA    AA  MM     MM  BBBBBBB   AA    AA \n'
       'D E V E L O P E D - B Y - I T A L O - A N D R E Y \n')
-
-print('1. Atualizar as Bibliotecas \n' #Menu
+#Menu
+print('1. Atualizar as Bibliotecas \n'
       '2. verificar status do SAMBA \n'
       '3. Instalar SAMBA \n'
       '4. Desinstalar SAMBA \n')
@@ -16,14 +17,20 @@ try:
     acao = int(input('O que deseja fazer? \n (1, 2, 3 ou 4) \n'))
 except (ValueError, TypeError, NameError):
     print('Erro, Por favor digite um número entre de 1 e 4')
-if acao == 1: #atualizando Bibliotecas
+
+"""Atualizando Bibliotecas"""
+if acao == 1: 
     print('Atualizando bibliotecas...')
-    os.system('sudo apt update') #Atualizando
+    os.system('sudo apt update')
     print('Bibliotecas atualizadas')
-elif acao == 2: #Verificando status do SAMBA
+
+"""Verificando status do SAMBA"""
+elif acao == 2: 
     print('Verificnado status do SAMBA...')
     os.system('systemctl status smbd.service')
-elif acao == 3:#Instalando o SAMBA
+      
+"""Instalando o SAMBA"""
+elif acao == 3:
     print('instalando SAMBA...')
     os.system('sudo apt install samba')
     os.system('y')
@@ -32,7 +39,9 @@ elif acao == 3:#Instalando o SAMBA
     os.system('sudo chown nobody:nogroup /srv/samba/share/')#Declarando as permissões
     os.system('sudo systemctl restart smbd.service nmbd.service') #reiniciando o serviço
     print('Samba instalado \n Diretórios criados \n Permissões ajustadas ')
-elif acao == 4:# Desinstalando samba
+      
+"""Desinstalando samba"""
+elif acao == 4:
     desinstalando = str(input('Tem certeza que deseja desinstalar o SAMBA? \n Digite Sim ou Nao \n'))
     if desinstalando.lower() == 'sim':
         print('Parando serviço SAMBA...')
